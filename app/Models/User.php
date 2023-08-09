@@ -3,6 +3,7 @@
 namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
+use Filament\Models\Contracts\FilamentUser;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
@@ -21,6 +22,10 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'foto_profil',
+        'tanggal_lahir',
+        'profesi',
+        'status_premium'
     ];
 
     /**
@@ -42,4 +47,20 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+
+    public function materis()
+    {
+        return $this->hasMany(Materi::class, 'id_mentor');
+    }
+
+    public function jadwals()
+    {
+        return $this->hasMany(Jadwal::class);
+    }
+
+    public function pembayaran()
+    {
+        return $this->hasOne(Pembayaran::class, 'id_pengguna');
+    }
+
 }
