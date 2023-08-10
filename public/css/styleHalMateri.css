@@ -1,0 +1,209 @@
+body {
+    background-color: #25222D;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    margin-top: 60px;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 50px;
+  }
+  .navbar {
+    background-color: #B77E7E;
+    display: flex;
+    justify-content: center; /* Center the navigation elements */
+    align-items: center;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; /* Set the width to 100% to cover the entire viewport */
+    z-index: 999;
+  }
+  
+  .profile-icon {
+    background-image: url("../assets/iconprofile.png"); /* Adjust the path to the icon inside the "assets" folder */
+    width: 32px; /* Adjust the width and height to match the size of your icon */
+    height: 32px;
+    display: block;
+    background-size: cover;
+    transition: transform 0.3s ease; /* Add transition for the transform property */
+  }
+  
+  .profile-icon:hover {
+    transform: scale(1.2); /* Adjust the scale value for the desired effect */
+  }
+  
+  /* Make the button smaller */
+  .profile-icon {
+    padding: 6px; /* Adjust the padding to make the button smaller */
+  }
+  
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 0px;
+    margin: 0;
+    padding: 0;
+    margin-right: 70%;
+    align-items: center; /* Center the nav links vertically */
+    
+  }
+  
+  .nav-links li {
+    padding: 5px 1px;
+    position: relative;
+  }
+  
+  .nav-links li a {
+    text-decoration: none;
+    color: white;
+    position: relative;
+    z-index: 1;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    line-height: 40px;
+    background-color: transparent; /* Set a transparent background for default state */
+    padding: 26px;
+  }
+  
+  .nav-links li a:hover {
+    color: #B77E7E;
+    background-color: white;
+    padding: 26px;
+  }
+  
+  .profile-button {
+    background-color: transparent;
+    color: #B77E7E;
+    border-radius: 10px;
+    cursor: pointer;
+    border: 2px solid #B77E7E;
+    transition: background-color 0.3s ease;
+  }
+  
+  .profile-button:hover {
+    
+    color: #B77E7E;
+  }
+  
+  .navbar-right {
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar-content {
+    max-width: 1444px; /* Set your desired maximum width */
+    width: 100%;
+    display: flex;
+    justify-content: space-between; /* Add this to space the logo and links */
+    align-items: center;
+  }
+  
+  /*.footer {
+    /* Your existing footer styles here 
+  }*/
+  
+  /* Rest of your existing styles here */
+  
+  /* New styles for material cards */
+  .material-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px; /* Increase the margin to add space between "Pilih Materi" and navbar */
+  }
+  
+  .center-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .category-text {
+    /* Your existing category-text styles here */
+    text-align: center;
+  }
+  
+  .pilih-materi {
+    margin-top: 100px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #FFFFFF;
+    text-align: left;
+    margin-right: 100px;
+  }
+  
+  .card-container {
+    /* Your existing card-container styles here */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .material-text {
+    text-align: center;
+    margin-bottom: 20px;
+    color: white;
+  }
+  
+  .material-card {
+    background-color: #3B3648;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    display: flex;
+    align-items: center;
+    max-width: 100%;
+    width: 650px;
+  }
+  
+  .material-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .material-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-right: 20px;
+  }
+  
+  .material-card-content {
+    color: white;
+  }
+  
+  .material-card-content h3 {
+    margin: 0;
+  }
+  
+  .material-card-content p {
+    margin: 5px 0;
+  }
+  
+  /* Media Query for larger screens */
+  @media screen and (min-width: 768px) {
+    .card-container {
+      flex-direction: column;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  
+    .pilih-materi {
+      text-align: center;
+      margin-right: auto;
+    }
+  }
+  
+  .material-card:hover {
+    transform: scale(1.05);
+  }
+  

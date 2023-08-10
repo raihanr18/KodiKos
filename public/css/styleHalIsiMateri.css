@@ -1,0 +1,147 @@
+body {
+    background-color: #25222D;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    margin-top: 60px;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 50px;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+  .navbar {
+    background-color: #B77E7E;
+    display: flex;
+    justify-content: center; /* Center the navigation elements */
+    align-items: center;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; /* Set the width to 100% to cover the entire viewport */
+    z-index: 999;
+  }
+  
+  .profile-icon {
+    background-image: url("../assets/iconprofile.png"); /* Adjust the path to the icon inside the "assets" folder */
+    width: 32px; /* Adjust the width and height to match the size of your icon */
+    height: 32px;
+    display: block;
+    background-size: cover;
+    transition: transform 0.3s ease; /* Add transition for the transform property */
+  }
+  
+  .profile-icon:hover {
+    transform: scale(1.2); /* Adjust the scale value for the desired effect */
+  }
+  
+  /* Make the button smaller */
+  .profile-icon {
+    padding: 6px; /* Adjust the padding to make the button smaller */
+  }
+  
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 0px;
+    margin: 0;
+    padding: 0;
+    margin-right: 70%;
+    align-items: center; /* Center the nav links vertically */
+    
+  }
+  
+  .nav-links li {
+    padding: 5px 1px;
+    position: relative;
+  }
+  
+  .nav-links li a {
+    text-decoration: none;
+    color: white;
+    position: relative;
+    z-index: 1;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    line-height: 40px;
+    background-color: transparent; /* Set a transparent background for default state */
+    padding: 26px;
+  }
+  
+  .nav-links li a:hover {
+    color: #B77E7E;
+    background-color: white;
+    padding: 26px;
+  }
+  
+  .profile-button {
+    background-color: transparent;
+    color: #B77E7E;
+    border-radius: 10px;
+    cursor: pointer;
+    border: 2px solid #B77E7E;
+    transition: background-color 0.3s ease;
+  }
+  
+  .profile-button:hover {
+    
+    color: #B77E7E;
+  }
+  
+  .navbar-right {
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar-content {
+    max-width: 1444px; /* Set your desired maximum width */
+    width: 100%;
+    display: flex;
+    justify-content: space-between; /* Add this to space the logo and links */
+    align-items: center;
+  }
+
+  .materi-container {
+    margin-top: 1750px;
+    display: flex;
+    align-self: center;
+    max-width: 65%; 
+    padding: 0 20px; 
+    box-sizing: border-box;
+  }
+
+  .materi-box {
+    background-color: #5E5A69;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+  }
+
+  .info-pembuat {
+      margin-top: 30px;
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+      padding-top: 20px;
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 14px;
+  }
+
+  .info-pembuat p {
+      margin: 5px 0;
+  }
+
+  .materi-text-container{
+    color: white;
+    align-content: center;
+    padding: 20px;
+    text-align: justify;
+  }

@@ -28,10 +28,11 @@ class JadwalResource extends Resource
     {
         return $form
             ->schema([
-                Forms\Components\Select::make('id_mentor')
+                Forms\Components\Select::make('id')
                     ->label('Mentor')
                     ->required()
-                    ->options(User::all()->pluck('email', 'id_mentor')),
+                    ->hiddenOn('edit')
+                    ->options(User::all()->pluck('email', 'id')),
                 Forms\Components\Select::make('hari')
                     ->options([
                         'senin' => 'Senin',
@@ -59,7 +60,8 @@ class JadwalResource extends Resource
                 Tables\Columns\TextColumn::make('jam'),
             ])
             ->filters([
-                //
+                Tables\Filters\SelectFilter::make('sort')
+                    // ->query(fn(Builder $query): Builder => $query->where('is_admin', 1))
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),

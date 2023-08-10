@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Auth;
 
 class Jadwal extends Model
 {
@@ -14,6 +15,15 @@ class Jadwal extends Model
 
     public function admin()
     {
-        return $this->belongsTo(Mentor::class);
+        return $this->belongsTo(User::class);
+    }
+
+    protected static function boot()
+    {
+        parent::boot();
+
+        self::creating(function ($model) {
+            $model->id_mentor = Auth::id(); 
+        });
     }
 }

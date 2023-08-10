@@ -31,6 +31,11 @@ class MateriResource extends Resource
                         Forms\Components\TextInput::make('judul')
                             ->required()
                             ->maxLength(200),
+                        Forms\Components\TextInput::make('deskripsi')
+                            ->required()
+                            ->maxLength(150),
+                        Forms\Components\FileUpload::make('cover')
+                            ->image(),
                         Forms\Components\Select::make('kategori')
                             ->label('Kategori')
                             ->required()
@@ -60,10 +65,10 @@ class MateriResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('id_mentor'),
                 Tables\Columns\TextColumn::make('judul'),
+                Tables\Columns\TextColumn::make('deskripsi'),
+                Tables\Columns\ImageColumn::make('cover'),
                 Tables\Columns\TextColumn::make('kategori'),
-                Tables\Columns\TextColumn::make('konten'),
                 Tables\Columns\TextColumn::make('waktu_dibuat')
                     ->dateTime(),
             ])

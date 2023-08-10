@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use App\Models\Pengguna;
+use App\Models\Profesi;
 use App\Models\User;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Auth\Events\Registered;
@@ -21,7 +22,9 @@ class RegisteredUserController extends Controller
      */
     public function create(): View
     {
-        return view('auth.register');
+        $profesi = Profesi::all()->pluck('profesi');
+
+        return view('auth.register', compact('profesi'));
     }
 
     /**
@@ -37,10 +40,13 @@ class RegisteredUserController extends Controller
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
         ]);
 
-        $user = Pengguna::create([
+        $user = User::create([
             'name' => $request->name,
             'email' => $request->email,
             'password' => Hash::make($request->password),
+            'profesi' => $request->profesi,
+            'is_admin' => 2,
+            'status_premium' => false
         ]);
 
         event(new Registered($user));

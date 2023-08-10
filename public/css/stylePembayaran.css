@@ -1,0 +1,308 @@
+body{
+    background-color: #25222D;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    margin-top: 60px;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 50px;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.navbar {
+  background-color: #B77E7E;
+  display: flex;
+  justify-content: center; /* Center the navigation elements */
+  align-items: center;
+  padding: 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%; /* Set the width to 100% to cover the entire viewport */
+  z-index: 999;
+}
+
+.profile-icon {
+  background-image: url("../img/iconprofile.png"); /* Adjust the path to the icon inside the "assets" folder */
+  width: 32px; /* Adjust the width and height to match the size of your icon */
+  height: 32px;
+  display: block;
+  background-size: cover;
+  transition: transform 0.3s ease; /* Add transition for the transform property */
+}
+
+.profile-icon:hover {
+  transform: scale(1.2); /* Adjust the scale value for the desired effect */
+}
+
+/* Make the button smaller */
+.profile-icon {
+  padding: 6px; /* Adjust the padding to make the button smaller */
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 0px;
+  margin: 0;
+  padding: 0;
+  margin-right: 70%;
+  align-items: center; /* Center the nav links vertically */
+  
+}
+
+.nav-links li {
+  padding: 5px 1px;
+  position: relative;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: white;
+  position: relative;
+  z-index: 1;
+  transition: color 0.3s ease, background-color 0.3s ease;
+  line-height: 40px;
+  background-color: transparent; /* Set a transparent background for default state */
+  padding: 26px;
+}
+
+.nav-links li a:hover {
+  color: #B77E7E;
+  background-color: white;
+  padding: 26px;
+}
+
+.profile-button {
+  background-color: transparent;
+  color: #B77E7E;
+  border-radius: 10px;
+  cursor: pointer;
+  border: 2px solid #B77E7E;
+  transition: background-color 0.3s ease;
+}
+
+.profile-button:hover {
+  
+  color: #B77E7E;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-content {
+  max-width: 1444px; /* Set your desired maximum width */
+  width: 100%;
+  display: flex;
+  justify-content: space-between; /* Add this to space the logo and links */
+  align-items: center;
+}
+
+input:invalid{
+  background: red;
+}
+.container{
+  margin-top: 80px;
+  background: #5E5A69;
+  width:38%;
+  height: 750px;
+  padding:15px;
+  position: absolute;
+  left:30%;
+  top:1%;
+  border-radius: 23px;
+  align-items: center;
+}
+.input-form{
+  width:95%;
+  background:#F9F9F9;
+  margin:0.9%;
+  padding:10px;
+  border: none;
+  border-radius: 5px;
+}
+.dot {
+    width: 95%;
+    margin: 0.9%;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    background-image: linear-gradient(45deg, #CAA1A1, #CAA1A1); /* Gradien warna latar belakang */
+    background-size: 200% 200%; /* Ukuran gradien latar belakang */
+    
+}
+
+@keyframes kilau-anim {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 200% 200%;
+    }
+}
+
+.dop {
+  align-self: center;
+    margin-bottom: 30px;
+    width: 95%;
+    margin-left: 0.9%;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    background-image: linear-gradient(45deg, #EEEEEE, #EEEEEE); /* Gradien warna latar belakang */
+}
+
+@keyframes kilau-anim {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 200% 200%;
+    }
+}
+
+.input-form-number{
+  width:12%;
+  background:#F9F9F9;
+  margin:1%;
+  padding:10px;
+  border: none;
+  border-radius: 5px;
+}
+.input-form-value{
+  width:57.5%;
+  background:#F9F9F9;
+  margin:1%;
+  padding:10px;
+  border: none;
+  border-radius: 5px;
+}
+
+input[type="radio"]{
+  visibility: hidden;
+  height: 0;
+  width: 0;
+}
+
+input[type="radio"]:checked{
+  background-color: #58ba83;
+}
+
+.btn-form-change{
+  width: 35%;
+  height: 7%;
+  margin: 5%;
+  padding: 10px;
+  border: none;
+  border-radius: 23px;
+  position: relative;
+  overflow: hidden;
+  float:left;
+  margin-left: 50px;
+ 
+}
+.btn-form-pay{
+  width: 35%;
+  height: 7%;
+  margin: 5%;
+  padding: 10px;
+  border: none;
+  border-radius: 23px;
+  position: relative;
+  overflow: hidden;
+  float:right;
+  margin-right: 50px;
+  color: white;
+  background-color: #B77E7E;
+}
+.btn-form-pay:hover{
+  background:#CAA1A1;
+}
+.btn-form-change:hover{
+  background: white;
+}
+
+table {
+    margin-top: 5px;
+    border-collapse: collapse;
+    width: 100%;
+    border: 0px solid #ddd;
+    
+    
+}
+
+th, td {
+    background: white;
+}
+
+th:hover {
+  box-shadow:2px 0px 10px 0px #F4F4F4;
+  border: 0px solid #68a2ff;
+}
+th{
+  border: 0px solid #F4F4F4;
+  
+}
+@media only screen and (max-width: 700px) {
+    .container{
+      width:80%;
+      left:6%;
+    }
+    .input-form-value{
+      width:49%;
+    }
+}
+
+.kilauu {
+    font-size: 38px;
+    color: #B77E7E; /* Membuat teks transparan untuk menampilkan gradien di bawahnya */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    
+}
+
+
+.kilau {
+    font-size: 16px;
+    color: #ffcc00; /* Warna teks */
+    background-image: linear-gradient(to right, #ffcc00, #ff9900); /* Gradien warna latar belakang */
+    background-size: 200% auto; /* Ukuran gradien latar belakang */
+    background-clip: text; /* Kliping latar belakang dengan teks */
+    -webkit-background-clip: text; /* Untuk dukungan browser berbasis Webkit */
+    color: transparent; /* Membuat teks transparan untuk menampilkan gradien di bawahnya */
+    animation: kilau-anim 3s infinite; /* Animasi kilau */
+}
+
+@keyframes kilau-anim {
+    0% {
+        background-position: 0 0; /* Posisi awal gradien */
+    }
+    100% {
+        background-position: 200% 0; /* Posisi akhir gradien (melintas dari kiri ke kanan) */
+    }
+}
+
+footer{
+  background: #25222D;
+  border-top-right-radius: 88px;
+  border-bottom-right-radius: 88px;
+  width:27%;
+  height:40px;
+  position: absolute;
+  bottom:0;
+}

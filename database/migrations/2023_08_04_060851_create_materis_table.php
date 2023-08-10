@@ -15,6 +15,8 @@ return new class extends Migration
             $table->id('id_materi');
             $table->string('judul', 200);
             $table->string('kategori', 100);
+            $table->string('deskripsi', 100);
+            $table->string('cover');
             $table->longText('konten');
             $table->timestamps('waktu_dibuat');
 

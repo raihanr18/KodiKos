@@ -11,7 +11,7 @@ class Materi extends Model
     use HasFactory;
 
     protected $primaryKey = 'id_materi';
-    protected $fillable = ['judul', 'kategori', 'konten', 'waktu_dibuat'];
+    protected $fillable = ['judul', 'cover', 'deskripsi', 'kategori', 'konten', 'waktu_dibuat'];
 
     public function mentor()
     {

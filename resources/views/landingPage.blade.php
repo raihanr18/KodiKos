@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+{{-- <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
         <meta charset="utf-8">
@@ -137,4 +137,110 @@
             </div>
         </div>
     </body>
+</html> --}}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kodikos</title>
+  <link rel="stylesheet" href="{{url('css/styleHalUtama.css')}}">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar-content">
+      <div class="logo"><a href="/" style="text-decoration: none; color: white;">Kodi<span>Kos</span></a></div>
+      <ul class="nav-links" >
+        <li><p style="color: #B77E7E;">a</p></li>
+      </ul>
+    </div>
+      <div class="navbar-right">
+        {{-- <button class="profile-button"><a href="{{route('profile.edit')}}" class="profile-icon"></a></button> --}}
+      </div>
+    </div>
+  </nav>
+
+  <div class="jumbotron">
+    <div class="jumbotron-content">
+      <div class="jumbotron-images">
+    <img src="{{url('img/vector.png')}}" alt="Vector Image" width="481" height="448" class="vector-image">
+        <img src="{{url('img/Team_Coding.png')}}" alt="Team Coding Image" width="342" height="342" class="team-coding-image">
+      </div>
+      <br><br>
+      <h1>Kodikos</h1>
+      <p>Wawasan Gratis, Harga Terjangkau! Pendidikan <br>Berkualitas Tanpa Batas bagi Anak Kos.</p>
+      <div class="jumbotron-buttons">
+        <a href="{{ route('login') }}" class="jumbotron-button">Mulai Belajar</a>
+        <a href="#" id="openModalBtn" class="jumbotron-button premium-button open-modal-button">Tentang Kami</a>
+      </div>
+    </div>
+  </div>
+
+<div id="myModal" class="modal">
+    <div class="modal-content">
+        <span class="close-modal-button" id="closeModalBtn">&times;</span>
+        <h2>
+            KodiKos
+        </h2>
+        <hr>
+        <p>Aplikasi ini dikeluarkan untuk memenuhi kebutuhan para pengguna yang ingin belajar koding secara gratis dan efisien. Selain itu, kami juga ingin memberikan kontribusi positif dalam dunia pendidikan dan meningkatkan keterampilan teknologi informasi di kalangan masyarakat. </p>
+        <img src="{{url('/logo/KodiKos-Logo1.png')}}" width="100px">
+    </div>
+</div>
+
+  <div class="content-container">
+    <div class="category-text">
+      <p style="color: #CAA1A1; font-size: 14px; font-weight: bold;">KATERGORI</p>
+      <p style="font-size: 20px; font-weight: bold;">Mau belajar apa hari ini?</p>
+      <p style="font-size: 14px;">Temukan materi berdasarkan minatmu.</p>
+    </div>
+
+    <div class="card-container">
+      <div class="card">
+        <h2>Card 1</h2>
+        <p>Card content goes here</p>
+        <a href="#" class="card-button">Learn More</a>
+      </div>
+      <div class="card">
+        <h2>Card 2</h2>
+        <p>Card content goes here</p>
+        <a href="#" class="card-button">Learn More</a>
+      </div>
+      <div class="card">
+        <h2>Card 3</h2>
+        <p>Card content goes here</p>
+        <a href="#" class="card-button">Learn More</a>
+      </div>
+    </div>
+  </div>
+  <footer class="footer">
+    <p>&copy; 2023 KodiKos.Team</p>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const openModalBtn = document.getElementById("openModalBtn");
+        const closeModalBtn = document.getElementById("closeModalBtn");
+        const modal = document.getElementById("myModal");
+
+        openModalBtn.addEventListener("click", function() {
+            modal.style.display = "block";
+        });
+
+        closeModalBtn.addEventListener("click", function() {
+            modal.style.display = "none";
+        });
+
+        window.addEventListener("click", function(event) {
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
+        });
+    });
+
+  </script>
+</body>
 </html>

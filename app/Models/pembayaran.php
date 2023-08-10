@@ -9,7 +9,7 @@ class Pembayaran extends Model
 {
     use HasFactory;
     protected $primaryKey = 'kode_pembayaran';
-    protected $fillable = ['info_pembayaran', 'tgl_aktivasi', 'tgl_kadaluarsa'];
+    protected $fillable = ['kode_pembayaran', 'info_pembayaran', 'tgl_aktivasi', 'tgl_kadaluarsa', 'id_pengguna'];
 
     public function pengguna()
     {
